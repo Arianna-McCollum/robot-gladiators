@@ -6,6 +6,16 @@ var randomNumber = function(min, max) {
 
   return value;
 };
+var getPlayerName = function() {
+  var name = "";
+
+  while (name === "" || name === null) {
+    name = prompt("What is your robot's name?");
+  } 
+
+  console.log("Your robot's name is " + name);
+  return name;
+};
 
 // fight function (now with parameter for enemy's object holding name, health, and attack values)
 var fight = function(enemy) {
@@ -171,6 +181,7 @@ var shop = function() {
 
 // player information
 var playerInfo = {
+  name: getPlayerName(),
   name: window.prompt("What is your robot's name?"),
   health: 100,
   attack: 10,
